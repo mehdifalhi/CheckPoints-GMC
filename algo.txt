@@ -1,0 +1,35 @@
+ALGORITHM count-nb-strings
+VAR
+    sentence : STRING ;
+    countLength , countWords , countVowels : INTEGER:=0 ;
+BEGIN
+    Write(sentence)
+    // count length of a sentence
+    WHILE (sentence[countLength] <> NULL ) DO
+        countLength := countLength + 1 ;
+    END_WHILE
+    Read(countLength) 
+    
+
+    // count words of a sentence
+    FOR i FROM 0 TO countLength STEP 1  DO
+        IF (sentence[i] := " ") THEN
+            countWords := countWords + 1 ;
+        END_IF
+    END_FOR
+     Read(countWords)
+
+   
+
+    //count vowels in a sentence
+    FOR i FROM 0 TO countLength STEP 1  DO
+        IF (sentence[i] := "a" or sentence[i] :="e" or sentence[i] :="u" or sentence[i] :="i"
+       
+        or sentence[i] :="I" or sentence[i] :="O" ) THEN
+            countVowels := countVowels + 1 ;
+        END_IF
+    END_FOR
+      Read(countVowels)
+    
+     
+END
